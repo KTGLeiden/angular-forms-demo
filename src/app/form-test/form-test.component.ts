@@ -9,14 +9,14 @@ import { PersonForm } from './person.form';
 /** Component to test our form with */
 export class FormTestComponent {
   /** Form that belongs to this component */
-  public form: PersonForm = new PersonForm();
+  public personForm: PersonForm = new PersonForm();
 
   /**
    * This function is called when a form has been submitted.
    * It will alert the user with his input.
    */
   public onFormSubmit() {
-    const person: PersonData = this.form.getModel();
+    const person: PersonData = this.personForm.getModel();
     alert(`
 Hi ${person.firstName} ${person.lastName}!
 You have been registered to our website.

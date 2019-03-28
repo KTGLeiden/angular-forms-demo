@@ -8,7 +8,7 @@ export class PersonForm extends FormGroup {
       firstName: new FormControl('', [Validators.required, Validators.maxLength(50)]),
       lastName: new FormControl('', [Validators.required, Validators.maxLength(50)]),
       emailAddress: new FormControl('', [Validators.email, Validators.maxLength(200)]),
-      age: new FormControl('', [Validators.max(99)])
+      age: new FormControl(null, [Validators.max(99)])
     });
   }
 

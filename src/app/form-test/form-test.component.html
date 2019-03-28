@@ -1,7 +1,7 @@
 <h1>Welcome to the test form!</h1>
 Fields with a <b>*</b> are obligatory
 <hr />
-<form [formGroup]="form" (submit)="onFormSubmit()">
+<form [formGroup]="personForm" (submit)="onFormSubmit()">
   <div class="form-group">
     <label>First name*</label>
     <input placeholder="First name" class="form-control" type="text" formControlName="firstName" />
@@ -18,5 +18,5 @@ Fields with a <b>*</b> are obligatory
     <label>Age</label>
     <input placeholder="Age" class="form-control" type="number" formControlName="age" />
   </div>
-  <button type="submit" class="btn btn-primary" [disabled]="form?.invalid">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="personForm?.invalid">Submit</button>
 </form>
