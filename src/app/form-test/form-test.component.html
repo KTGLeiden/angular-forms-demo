@@ -1,0 +1,22 @@
+<h1>Welcome to the test form!</h1>
+Fields with a <b>*</b> are obligatory
+<hr />
+<form [formGroup]="form" (submit)="onFormSubmit()">
+  <div class="form-group">
+    <label>First name*</label>
+    <input placeholder="First name" class="form-control" type="text" formControlName="firstName" />
+  </div>
+  <div class="form-group">
+    <label>Last name*</label>
+    <input placeholder="Last name" class="form-control" type="text" formControlName="lastName" />
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input placeholder="Email" class="form-control" type="email" formControlName="emailAddress" />
+  </div>
+  <div class="form-group">
+    <label>Age</label>
+    <input placeholder="Age" class="form-control" type="number" formControlName="age" />
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="form?.invalid">Submit</button>
+</form>
